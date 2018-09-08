@@ -1,9 +1,10 @@
 <h1>Nuestro equipo</h1>
 
+<h2>Listado de miembros</h2>
 <ul>
-	<li>Juan Rodriguez</li>
-	<li>Juan Rodriguez</li>
-	<li>Juan Rodriguez</li>
+	<li *ngFor="let miembroEquipo of miEquipo, index as i">
+		{{ miembroEquipo.nombre }} - <a [routerLink]="['/equipo', i]">Ver más</a>
+	</li>
 </ul>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices sem eget orci aliquam sollicitudin. Curabitur ut euismod est, non semper metus. Curabitur nunc odio, porta non lorem ac, elementum cursus magna. Praesent rhoncus aliquet laoreet. Mauris sollicitudin nisi lectus, vitae ultrices augue bibendum ac. Donec in scelerisque libero. Nulla mattis lectus vitae erat sollicitudin scelerisque. Praesent vehicula nulla et turpis pellentesque hendrerit. Sed eget ipsum et felis ultrices auctor non eu turpis. Suspendisse vel lobortis nulla. Etiam efficitur, ipsum at lacinia imperdiet, odio elit posuere nunc, facilisis convallis metus nulla ut ligula. Nam vulputate felis ac felis tristique, eget vestibulum urna semper. Sed sollicitudin diam ut nunc luctus faucibus.</p>

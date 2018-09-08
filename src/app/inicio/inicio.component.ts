@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EquipoService } from './../services/equipo.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+	miEquipo:Array<any>;
+
+  constructor(private _servicio:EquipoService) { 
+  	this.miEquipo=[
+  		{
+  			nombre:"",
+  			especialidad:""
+  		}
+  	];
+  }
 
   ngOnInit() {
+  	this.miEquipo=this._servicio.traerEquipo();
   }
 
 }
